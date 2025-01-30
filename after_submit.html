@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="message-box">
+                <h1 class="success-message">Success!</h1>
+                <h2>Thanks for joining us</h2>
+                <h2 style="color: #3ed63e;">Solution That Keeps Nature Green</h2>
+                <div class="button-container">
+                   <a href="index.html"> <button class="home-button">Go to Home</button></a>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+<style>
+
+  
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #3ed63e, #0ea8b3);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+.container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    opacity: 0;
+    animation: fadeInContainer 1s forwards;
+}
+@media (max-width: 768px){
+   .container{
+    max-width: 250px;
+   } 
+}
+
+
+.success-message {
+    color: #4caf50;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    animation: slideInFromTop 1.2s ease-out;
+}
+
+
+h2 {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 20px 0;
+    opacity: 0;
+    animation: fadeInText 1.5s ease-out 1s forwards;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+
+button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.home-button {
+    background-color: #872fd3;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.home-button:hover {
+    background-color: #4A3A55;
+    transform: translateY(-5px);
+}
+
+
+.celebrate-button {
+    background-color: #F7B731;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.celebrate-button:hover {
+    background-color: #FF9F1C;
+    transform: translateY(-5px);
+}
+
+
+@keyframes fadeInContainer {
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeInButtons {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.home-button, .celebrate-button {
+    animation: fadeInButtons 1s ease-out forwards;
+}
+
+.home-button {
+    animation-delay: 1.5s;
+}
+
+.celebrate-button {
+    animation-delay: 2s;
+}
+
+</style>
